@@ -1,0 +1,101 @@
+[Info]
+
+#title : Nitrium Black
+#author : Nitrium Browser team
+#description : Black theme
+
+[Style]
+
+QMainWindow {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+QWidget {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+QToolBar {
+    background-color: #000000;
+    color: #FFFFFF;
+    border: 1px solid #333333;
+}
+QLineEdit {
+    background-color: #111111;
+    color: #FFFFFF;
+    border: 1px solid #444444;
+    padding: 5px;
+    border-radius: 3px;
+}
+QStatusBar {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+QPushButton {
+    background-color: #111111;
+    color: #FFFFFF;
+    border: 1px solid #444444;
+    padding: 5px;
+    border-radius: 3px;
+}
+QPushButton:hover {
+    background-color: #222222;
+}
+QPushButton:pressed {
+    background-color: #333333;
+}
+QComboBox {
+    background-color: #111111;
+    color: #FFFFFF;
+    border: 1px solid #444444;
+    padding: 3px;
+    border-radius: 3px;
+}
+QComboBox:editable {
+    background-color: #111111;
+    color: #FFFFFF;
+    border: 1px solid #444444;
+}
+QComboBox QAbstractItemView {
+    background-color: #111111;
+    color: #FFFFFF;
+    border: 1px solid #444444;
+}
+QCheckBox {
+    background-color: #000000;
+    color: #FFFFFF;
+    padding: 2px;
+}
+QTabWidget::pane {
+    background-color: #000000;
+    border: 1px solid #333333;
+}
+QTabBar::tab {
+    background-color: #111111;
+    color: #FFFFFF;
+    border: 1px solid #444444;
+    padding: 5px;
+}
+QTabBar::tab:selected {
+    background-color: #222222;
+    border-color: #555555;
+}
+QTabBar::tab:hover {
+    background-color: #333333;
+}
+QScrollBar:vertical, QScrollBar:horizontal {
+    background-color: #000000;
+    border: 1px solid #333333;
+}
+QScrollBar::handle {
+    background-color: #444444;
+    border: 1px solid #555555;
+    border-radius: 3px;
+}
+QScrollBar::handle:hover {
+    background-color: #555555;
+}
+QAction {
+    background-color: transparent;
+    color: #FFFFFF;
+    border: none;
+}

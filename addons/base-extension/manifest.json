@@ -1,0 +1,20 @@
+{
+    "name": "NitriumCore",
+    "version": "1.0.0",
+    "description": "Core extension",
+    "author": "Nitrium Browser Team",
+    "uuid": "37cf2433-f320-4663-b600-195053d81c65",
+    "installed": false,
+    "INFO_COMMENTS": "The UUID is set by the browser please don't touch it!",
+    "authorizations": [
+        "INJECT_CODE_JS"
+    ],
+    "start_page": "https://eletrix.fr", 
+    "injects": [
+        {
+            "type": "javascript",
+            "code": "injects/addons.js",
+            "domain": "file:///widgets/html/addons.html"
+        }
+    ]
+}

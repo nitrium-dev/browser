@@ -1,28 +1,4 @@
-<p align="center">
-  <img src="libs/nitrium.ico" width="200" > 
-  <h1 align="center">Nitrium Browser</h1>
-</p>
-
-Nitrium Browser is a simple and lightweight web browser built with PyQt5.
-# THIS IS IN DEVELOPPEMENT NOT STABLE YET!
-## Features
-
-- Lightweight
-- Fast
-- Open source
-- Cross-platform
-- Themes
-- Extensions
-- Python <3
-
-## Installation
-
-### Windows
-
-1. Download the latest release from the [Releases](https://github.com/EletrixTime/NitriumBrowser/releases) page.
-2. Run lol
-
-### License :
+"""
 Nitrium Web Browser - A simple and lightweight web browser built with PyQt5.
 
 Copyright (c) 2024 EletrixTime
@@ -44,3 +20,13 @@ DISCLAIMER:
 This software is provided "as is", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose, and noninfringement. In no event shall the authors or copyright holders be liable for any claim, damages, or other liability, whether in an action of contract, tort, or otherwise, arising from, out of, or in connection with the software or the use or other dealings in the software.
 
 Enjoy using Nitrium! Feedback and contributions are welcome.
+"""
+
+# Logs handler (for nothing)
+import sys
+import shared
+def print(t):
+    if shared.DEBUG == True:
+        sys.stdout.write(t)
+    else:
+        pass

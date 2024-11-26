@@ -1,0 +1,58 @@
+[Info]
+
+#title : Light theme (default)
+#author : Nitrium Browser team
+#description : Nitrium Browser light theme
+
+[Style]
+
+QMainWindow {
+    background-color: #FFFFFF;
+    color: #000000;
+}
+QWidget {
+    background-color: #F5F5F5;
+    color: #000000;
+}
+QToolBar {
+    background-color: #F5F5F5;
+    color: #000000;
+}
+QLineEdit {
+    background-color: #FFFFFF;
+    color: #000000;
+    border: 1px solid #CCCCCC;
+}
+QStatusBar {
+    background-color: #F5F5F5;
+    color: #000000;
+}
+QPushButton {
+    background-color: #FFFFFF;
+    color: #000000;
+    border: 1px solid #CCCCCC;
+}
+QComboBox {
+    background-color: #FFFFFF;
+    color: #000000;
+    border: 1px solid #CCCCCC;
+}
+QComboBox:editable {
+    background-color: #FFFFFF;
+    color: #000000;
+    border: 1px solid #CCCCCC;
+} 
+QComboBox QAbstractItemView {
+    background-color: #FFFFFF;
+    color: #000000;
+    border: 1px solid #CCCCCC;
+} 
+QCheckBox {
+    background-color: #FFFFFF;
+    padding: 1px;
+    color: #000000;
+}
+QAction {
+    background: transparent;
+    border: none;
+}
