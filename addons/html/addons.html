@@ -1,0 +1,20 @@
+<h1>Add-ons</h1>
+<p>Here your list of Themes/Extensions</p>
+<script src="qrc:///qtwebchannel/qwebchannel.js"></script>
+<h2>Cooming soon !</h2>
+<div id="theme_list"></div>
+<script>
+    function getThemeList(){
+        THEME_LIST_DIV = document.getElementById('theme_list');
+        THEME_LIST_DIV.innerHTML = '';
+        // add the list of themes
+        // parse the dict
+        for (var i = 0; i < THEME.length; i++) {
+            THEME_LIST_DIV.innerHTML += '<div class="theme">' + THEME[i] + '</div>';
+        }
+    }
+    function core(){
+        getThemeList();
+    }
+
+</script>

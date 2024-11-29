@@ -37,12 +37,13 @@ from libs.confighandler import ConfigHandler
 from libs.theme_parser import ThemeParser
 from libs.history import History
 from libs.extensions_manager import ExtensionsManager
+from libs.hashcheck import *
 
 import traceback
 import shared
 from datetime import datetime
 import sys
-
+import os
         
 class Window(QMainWindow):
     def __init__(self, *args, **kwargs):
@@ -62,11 +63,22 @@ class Window(QMainWindow):
         self.setStatusBar(self.status_bar)
 
         # Start Page
-        start_page = EXT.check_for_start_page_extension()
-        if start_page:
-            self.tabs.add_new_tab(QUrl(start_page), "Start Page")
+        if CONFG.config['check_hash']:
+            if os.path.exists("nitriumbrowser.exe"):
+                hashchk = hash_check('nitriumbrowser.exe')
+            else:
+                hashchk = hash_check('nitriumbrowser.py')
         else:
-            self.go_to_home()
+            hashchk = True
+        
+        if hashchk:
+            start_page = EXT.check_for_start_page_extension()
+            if start_page:
+                self.tabs.add_new_tab(QUrl(start_page), "Start Page")
+            else:
+                self.go_to_home()
+        else:
+            self.tabs.add_new_tab(QUrl('file:///addons/html/browser_hash_invalid.html'), "Invalid Hash")
 
         self.set_status_tip(CONFG.get_json()['product_name'] + ' v' + CONFG.get_json()['version_number'] + ' release : ' + CONFG.get_json()['version'])
         self.toolbar = WidgetToolbar(self)
@@ -76,11 +88,11 @@ class Window(QMainWindow):
     def unknowhandler(self, url):
         if url == 'nitrium://settings':
             # load the settings page
-            self.tabs.add_new_tab(QUrl('file:///widgets/html/settings.html'), "Settings")
+            self.tabs.add_new_tab(QUrl('file:///addons/html/settings.html'), "Settings")
             
             return True
         elif url == 'nitrium://addons':
-            self.tabs.add_new_tab(QUrl('file:///widgets/html/addons.html'), "Addons")
+            self.tabs.add_new_tab(QUrl('file:///addons/html/addons.html'), "Addons")
             
             return True
         return False
